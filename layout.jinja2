@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Flerg{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{request.static_path('static/base.css'")}}
+</head>
+<body>
+    {% block body %}{% endblock %}
+
+    <nav>
+        <button>
+        <a href="{{request.route_url('home' }}">To The Home Page</a>
+        </button>
+    </nav>
+    {% if sidebar %}
+    <aside>{% block sidebar %}
+    </aside>
+</body>
+</html>
+
+"""not in notes:
+in routes, how to put {} stuff in your url"""
+ 
+*template has access to the request obj.
