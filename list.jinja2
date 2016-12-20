@@ -1,0 +1,13 @@
+{% extends "layout.jinja2" %}
+{% block title %}Home Page{% endblock %}
+
+{% block body %}
+<!-- the meat for each page goes here -->
+<h1>This is where I list what's in my bag.</h1>
+<ul>
+    {% for item in bag_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
+
+</ul>
+{% endblock %}
