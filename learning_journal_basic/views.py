@@ -29,7 +29,7 @@ def create_page(request):
 
 def edit_page(request):
     """View for the edit page."""
-    file_path = os.path.join(THIS_DIR, 'templates', 'edit_entryx.html')
+    file_path = os.path.join(THIS_DIR, 'templates', 'edit_entry.html')
     file_data = io.open(file_path).read()
     return Response(file_data)
 
