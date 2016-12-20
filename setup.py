@@ -14,6 +14,8 @@ requires = [
     'pyramid_jinja2',
     'pyramid_debugtoolbar',
     'waitress',
+    'ipython',
+    'pyramid_ipython'
     ]
 
 tests_require = [
