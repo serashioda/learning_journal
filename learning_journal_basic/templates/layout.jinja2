@@ -2,24 +2,23 @@
 
 <html>
     <head>
-        <title>Rachael Wisecarver</title>
+        <title>Sera Shioda Smith</title>
         <link rel="stylesheet" href={{ request.static_path('lj:static/css/base.css')}}>
     </head>
     <body>
         <header>
-            <h1><a href={{ request.route_url('list') }}>Rachael Wisecarver</a></h1>
+            <h1><a href={{ request.route_url('list') }}>Sera Shioda Smith</a></h1>
             <nav>
                 <ul>
                     <li><a href="#">About</a></li>
                     <li><a href={{ request.route_url('create') }}>New Post</a></li>
-                    <li><a href="#">Portfolio</a></li>
                 </ul>
             </nav>
         </header>
         {% block body %}
         {% endblock %}
         <footer>
-            <p class="footer">&#169 2016 Rachael Wisecarver</p>
+        <p>© 2016 Sera Shioda Smith. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
         </footer>
     </body>
 </html>
