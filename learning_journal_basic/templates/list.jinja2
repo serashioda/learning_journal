@@ -1,20 +1,23 @@
 {% extends "layout.jinja2" %}
-
 {% block body %}
-    <img id="header" src={{ request.static_path('lj:static/images/Bookshelf.jpg') }}>
-    <main>
-        <article class="post">
-            <ul>
-                {% if entries %}
-                    {% for key in entries %}
-                        <li>
-                            <h3><a href={{ request.route_url('detail', id=key) }}>{{ entries[key].title }}</a></h3>
-                            <h4>Date Created: {{ entries[key].creation_date }}</h4>
-                            <p>{{ entries[key].body| truncate(500) }}</p>
-                        </li>
-                    {% endfor %}
-                {% endif %}
-            </ul>    
-        </article>
-    </main>
-{% endblock %}
+<html>
+    <head>
+        <title>Sera Shioda Smith</title>
+        <link rel="stylesheet" href={{ request.static_path('learning_journal_basic:static/css/bootstrap.css')}}>
+    </head>
+    <body>
+        <header>
+            <h1><a href="{{ request.route_url('detail, id=entry.id') }}">Sera Shioda Smith{{ entry.title }}</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href={{ request.route_url('create') }}>New Post</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% endblock %}
+        <footer>
+        <p>© 2016 Sera Shioda Smith. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+        </footer>
+    </body>
+</html>

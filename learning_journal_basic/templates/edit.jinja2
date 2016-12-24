@@ -1,18 +1,14 @@
 {% extends "layout.jinja2" %}
-    {% block body %}
-        <main>
-            <h3>Edit your Post</h3>
-            <article class="create">
+{% block body %}
+    <main>
+        <h3>Edit your Entry</h3>
+            <article class="edit">
                 <form method="POST" action="" enctype="multipart/form-data">
-                Title:
-                    <input type=text, name="title" required/>
-                    <br>
-                    <br>
-                    <textarea name="post" class="blogpost" cols="80" rows="20"></textarea>
-                    <br>
-                    <br>
+                <h4>Title:</h4>
+                    <input type="text" name="title" value="{{ entry.title }}">
+                    <textarea name="entry_body">{{ entry.body }}</textarea>
                     <input class="btn" type="submit" value="Submit">
                 </form>
             </article>
-        </main>
-    {% endblock %}
+    </main>
+{% endblock %}
