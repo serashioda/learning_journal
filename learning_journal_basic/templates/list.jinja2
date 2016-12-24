@@ -1,6 +1,6 @@
 {% extends "layout.jinja2" %}
 {% block title %} Sera Shioda Smith - Learning Journal - Entries {% endblock %}
-{% block body %}
+
 <html>
     <head>
         <title>Sera Shioda Smith</title>
@@ -12,13 +12,20 @@
             <nav>
                 <ul>
                     <li><a href="#">About</a></li>
-                    <li><a href={{ request.route_url('create') }}>New Post</a></li>
+                    <li><a href="{{ request.route_url('create') }}">New Post</a></li>
                 </ul>
             </nav>
         </header>
-        {% endblock %}
+        <body>
+            {% for item in posts %}
+                <a href="{{ request.route_url('detail', id=item.id) }}">{{ item.title }}</a>
+                {{ item.create_date }}
+                {% for tag in item.tags %}{{ tag }}, {% endfor %}
+            {% endfor %}
+        </body>
         <footer>
         <p>© 2016 Sera Shioda Smith. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
         </footer>
     </body>
 </html>
+{% endblock %}
