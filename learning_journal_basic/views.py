@@ -63,10 +63,9 @@ def edit_page(request):
     return {"entry": entry}
 
 
-def includeme(config):
-    """The configurator will attach my views to routes."""
-    config.add_view(home_page, route_name='home')
-    config.add_view(detail_page, route_name='detail')
-    config.add_view(create_page, route_name='create')
-    config.add_view(edit_page, route_name='update')
-
+# def includeme(config):
+#     """The configurator will attach my views to routes."""
+#     config.add_view(home_page, route_name='home')
+#     config.add_view(detail_page, route_name='detail')
+#     config.add_view(create_page, route_name='create')
+#     config.add_view(edit_page, route_name='update')
