@@ -1,14 +1,13 @@
 {% extends "layout.jinja2" %}
-    {% block body %}
-        <h1>DETAIL PAGE</h1>
-        <main>
-            <article class="post">
-                <h3>{{ entry.title }}</h3>
-                    <h4>{{ entry.creation_date }}</h4>
-                    <p>{{ entry.body }}</p>
-            </article>
-            <section>
-                <a class="edit" href={{ request.route_url('edit', id=id) }}>Edit Post</a>
-            </section>
-        </main>
-    {% endblock %}
+{% block title %}Sera Shioda Smith - Learning Journal - Entry {{ entry.id }}{% endblock %}
+
+{% block body %}
+
+<h3>{{ entry.title }}</h3>
+<h4>{{ entry.creation_date }}</h4>
+<p>{{ entry.body }}</p>
+<div class="about-btn">
+<a href="{{ request.route_url('edit', id=entry.id) }}">Edit Entry</a>
+<div>
+
+{% endblock %}

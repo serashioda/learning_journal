@@ -96,42 +96,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <!-- New Article Form -->
             {% block body %}
                 <main>
-                    <h3>Create a Post</h3>
                     <article class="create">
                         <form method="POST" action="" enctype="multipart/form-data">
                         <!-- Page Content -->
-                        <div class="container">
-                            <div class="row">
-                                <!-- Blog Post Content Column -->
-                                <div class="col-lg-8">
-                                    <hr>
-                                    <!-- New Article Form -->
-                                    <div class="well">
-                                        <h4>NEW ENTRY:</h4>
-                                        <form role="form">
-                                        <div class="form-group">
-                                            {% for entry in ENTRIES %}
-                                            <div class="col-md-6 abt-left">
-                                                <h3><a href={{ request.route_url('create') }}>New Post</a><img src="static/images/grumpydog2.jpeg" alt="" /></a></h3>
+                            <div class="container">
+                                <div class="row">
+                                    <!-- Blog Post Content Column -->
+                                    <div class="col-lg-8">
+                                        <hr>
+                                        <!-- New Article Form -->
+                                        <div class="well">
+                                            <h4>NEW ENTRY</h4>
+                                            <form role="form">
+                                                <div class="form-group">
+                                                    <p>TITLE</p>
+                                                    <textarea class="form-control" rows="1"></textarea>
+                                                    <p>BODY</p>
+                                                    <textarea class="form-control" rows="10"></textarea>
                                                 </div>
-                                            </div>
-                                            <p>BODY<p>
-                                            <textarea class="form-control" rows="10"></textarea>
+                                                <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                            </form>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">SUBMIT</button>
-                                        {# </form> #}
-                                        {% endfor %}
+                                        <hr>
                                     </div>
-                                    <hr>
                                 </div>
                             </div>
-                        </div>
-                            <!-- /.row -->
-                            <textarea class="blogpost" name="post" cols="80" rows="20"></textarea>
-                            <br>
-                            <br>
-                            <input class="btn" type="submit" value="Submit">
-                        </form>
                     </article>
                 </main>
             {% endblock %}
@@ -165,14 +154,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
       <hr>
  #}
-      <!--footer-starts-->
-      <div class="footer">
-        <div class="container">
-            <div class="footer-text">
-                <p>© 2016 Sera Shioda Smith. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
-            </div>
-        </div>
-      </div>
-      <!--footer-end-->
-</body>
-</html>

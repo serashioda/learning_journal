@@ -7,83 +7,60 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <html lang="en">
-    <head>
-    <title>
-        {% block title %} Sera Shioda Smith - Learning Journal | Home :: w3layouts{ % endblock % }
-    </title>
-    <meta name="keywords" content="Coffee Break Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="author" content="Sera Shioda Smith">
-    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    <script src="js/jquery.min.js"></script>
-        {# <link rel="stylesheet" href={{ request.static_path('learning_journal_basic:static/css/base.css')}}> #}
-        <link rel="stylesheet" href="{{ request.static_path('learning_journal_basic:static/css/bootstrap.css') }}">
-        <link rel="stylesheet" href="{{ request.static_path('learning_journal_basic:static/css/style.css') }}">
-    </head>
-<header>
-    <h1><a href={{ request.route_url('list') }}>Sera Shioda Smith</a></h1>
 
-
-{# <!---- start-smoth-scrolling---->
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-            jQuery(document).ready(function($) {
-                $(".scroll").click(function(event){
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-                });
-            });
-        </script>
-<!--start-smoth-scrolling--> #}
-    <nav>
-        <a href="{{ request.route_url('list') }}">Home</a>
-        <a href="{{ request.route_url('create') }}">New Entry</a>
-        <a href="{{ request.route_url('edit', id=0) }}">Edit Entry</a>
-        {# <a href="{{ request.route_url('detail') }}">Read More</a> #}
-    </nav>
-</header>
-    <body>
-    <!--header-top-starts-->
-    <!--header-top-end-->
-    <!--start-header-->
     <div class="header">
         <div class="container">
             <div class="head">
-            <div class="navigation">
-                 <span class="menu"></span>
-                    <ul class="navig">
-                        <li><a href="/"  class="active">Home</a></li>
-                        <li><a href={{ request.route_url('list') }}>Sera Shioda Smith - Journals</a></li>
-                        <!-- <li><a href="templates/about.html">About</a></li> -->
-                    </ul>
+            <head>
+                    <title>
+                        {% block title %} Sera Shioda Smith - Entry | Home :: w3layouts{% endblock %}
+                    </title>
+                    <meta name="keywords" content="Coffee Break Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+                    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+                    <meta name="author" content="Sera Shioda Smith">
+                    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+                    <script src="js/jquery.min.js"></script>
+                        {# <link rel="stylesheet" href={{ request.static_path('learning_journal_basic:static/css/base.css')}}> #}
+                        <link rel="stylesheet" href="{{ request.static_path('learning_journal_basic:static/css/bootstrap.css') }}">
+                        <link rel="stylesheet" href="{{ request.static_path('learning_journal_basic:static/css/style.css') }}">
+            </head>
+
+                <div class="navigation">
+                    <span class="menu"></span>
+                        <ul class="navig">
+                            <li><a href="/"  class="active">Home</a></li>
+                            <li><a href="{{ request.route_url('create') }}">New Entry</a></li>
+                            <li><a href="{{ request.route_url('list') }}"> Entries </a></li>
+                            <!-- <li><a href="templates/about.html">About</a></li> -->
+                        </ul>
+                </div>
             </div>
             <div class="header-right">
                 <div class="search-bar">
                     <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
                     <input type="submit" value="">
                 </div>
-                <!-- <ul>
-                    <li><a href="#"><span class="fb"> </span></a></li>
-                    <li><a href="#"><span class="twit"> </span></a></li>
-                    <li><a href="#"><span class="pin"> </span></a></li>
-                </ul> -->
-            </div>
+                    <!-- <ul>
+                        <li><a href="#"><span class="fb"> </span></a></li>
+                        <li><a href="#"><span class="twit"> </span></a></li>
+                        <li><a href="#"><span class="pin"> </span></a></li>
+                    </ul> -->
                 <div class="clearfix"></div>
             </div>
-            </div>
         </div>
+    </div>
     <!-- script-for-menu -->
     <!-- script-for-menu -->
-        <script>
-            $("span.menu").click(function(){
-                $(" ul.navig").slideToggle("slow" , function(){
-                });
+    <script>
+        $("span.menu").click(function(){
+            $(" ul.navig").slideToggle("slow" , function(){
             });
-        </script>
+        });
+    </script>
     <!-- script-for-menu -->
+
     <!--banner-starts-->
     <div class="banner">
         <div class="container">
@@ -92,99 +69,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <h2>Learning</h2>
                     <h1>Journal</h1>
                     <div class="about-btn">
-                        <a href={{ request.route_url('create') }}>New Post</a>
+                        <a href="{{ request.route_url('create') }}">New Post</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--banner-end-->
-    <!--about-starts-->
-    <div class="about">
-        <div class="container">
-            <div class="about-main">
-                <div class="col-md-8 about-left">
-                    
-                    <div class="about-tre">
-                        <div class="a-1">
-                            {% for entry in ENTRIES %}
-                            <div class="col-md-6 abt-left">v
-                                <a href={{ request.route_url('detail', id=key) }}>{{ entry.title }}</a><img src="static/images/grumpydog2.jpeg" alt="" /></a>
-                                <h6>{{ entry.title }}</h6>
-                                <h3><a href={{ request.route_url('detail', id=key) }}>{{ entry.title }}</a></h3>
-                                    <p>{{ entry.body| truncate(500) }}</p>
-                                <h4>Date Created: {{ entry.creation_date }}</h4>
-                                <div class="about-btn">
-                                    <a href={{ request.route_url('detail', id=key) }}>Read More</a>
-                                </div>
-                            </div>
-                            {% endfor %}
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 about-right heading">
-                    <div class="abt-1">
-                        {# <h3>ABOUT</h3>
-                        <div class="abt-one">
-                            <img src="static/images/journal.jpg" alt="" />
-                            <p>Quisque non tellus vitae mauris luctus aliquam sit amet id velit. Mauris ut dapibus nulla, a dictum neque.</p>
-                            <div class="a-btn">
-                                <a href="templates/about.html">Read More</a>
-                            </div> #}
-                        </div>
-                    </div>
-                    {# <div class="abt-2">
-                        <h3>YOU MIGHT ALSO LIKE:</h3>
-                            <div class="might-grid">
-                                <div class="grid-might">
-                                    <a href="/journal/{id:\d+}"><img src="static/images/c-12.jpg" class="img-responsive" alt=""> </a>
-                                </div>
-                                <div class="might-top">
-                                    <h4><a href="/journal/entry">Duis consectetur gravida</a></h4>
-                                    <p>Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="might-grid">
-                                <div class="grid-might">
-                                    <a href="/journal/entry"><img src="static/images/c-10.jpg" class="img-responsive" alt=""> </a>
-                                </div>
-                                <div class="might-top">
-                                    <h4><a href="/journal/entry">Duis consectetur gravida</a></h4>
-                                    <p> Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                            <div class="might-grid">
-                                <div class="grid-might">
-                                    <a href="/journal/entry"><img src="static/images/c-11.jpg" class="img-responsive" alt=""> </a>
-                                </div>
-                                <div class="might-top">
-                                    <h4><a href="/journal/entry">Duis consectetur gravida</a></h4>
-                                    <p> Nullam non magna lobortis, faucibus erat eu, consequat justo. Suspendisse commodo nibh odio.</p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                    </div>
-                    <div class="abt-2">
-                        <h3>ARCHIVES</h3>
-                        <ul>
-                            <li><a href="/journal/{id:\d+}">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </a></li>
-                            <li><a href="/journal/entry">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</a></li>
-                            <li><a href="/journal/entry">When an unknown printer took a galley of type and scrambled it to make a type specimen book. </a> </li>
-                            <li><a href="/journal/entry">It has survived not only five centuries, but also the leap into electronic typesetting</a> </li>
-                            <li><a href="/journal/entry">Remaining essentially unchanged. It was popularised in the 1960s with the release of </a> </li>
-                            <li><a href="/journal/entry">Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing </a> </li>
-                            <li><a href="/journal/entry">Software like Aldus PageMaker including versionsof Lorem Ipsum.</a> </li>
-                        </ul>
-                    </div> #}
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-    <!--about-end-->
+
+    <!--body-starts-->
+    <body>
+
+        {% block body %}{% endblock %}
+
+    </body>
+    <!--body-end-->
+
     <!--footer-starts-->
     <div class="footer">
         <div class="container">
@@ -194,5 +94,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!--footer-end-->
-</body>
+
 </html>

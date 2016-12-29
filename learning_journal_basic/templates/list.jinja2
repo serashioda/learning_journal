@@ -1,31 +1,47 @@
 {% extends "layout.jinja2" %}
 {% block title %} Sera Shioda Smith - Learning Journal - Entries {% endblock %}
 
-<html>
-    <head>
-        <title>Sera Shioda Smith</title>
-        <link rel="stylesheet" href={{ request.static_path('learning_journal_basic:static/css/bootstrap.css')}}>
-    </head>
-    <body>
-        <header>
-            <h1><a href="{{ request.route_url('detail, id=entry.id') }}">Sera Shioda Smith{{ entry.title }}</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="{{ request.route_url('create') }}">New Post</a></li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Body Layout -->  
+
+    {% block body %} 
         <body>
-            {% for item in posts %}
-                <a href="{{ request.route_url('detail', id=item.id) }}">{{ item.title }}</a>
-                {{ item.create_date }}
-                {% for tag in item.tags %}{{ tag }}, {% endfor %}
-            {% endfor %}
+        {% for entry in entries %}
+          {#   <div class="container">
+                <div class="col-md-6 abt-left">
+                    <a href="{{ request.route_url('detail', id=entry.id) }}""></a><img src="static/images/grumpydog2.jpeg" alt="" /></a>
+                    <h6>{{ entry.title }}</h6>
+                    <h3><a href="{{ request.route_url('detail', id=entry.id) }}">{{ entry.title1 }}</a></h3>
+                        <p>{{ entry.body| truncate(500) }}</p>
+                    <h4>Date Created: {{ entry.create_date }}</h4>
+                </div>
+                <div class="about-btn">
+                    <a href="{{ request.route_url('detail', id=entry.id) }}">Read More</a>
+                    <a href="{{ request.route_url('edit', id=entry.id) }}">Edit Entry</a>
+                </div> #}
+            {# </div> #}
+
+
+            <!--banner-starts-->
+            <div class="banner1">
+                <div class="container">
+                    <div class="banner1-top">
+                        <div class="banner1-text">
+                            <h2>{{ entry.title }}</h2>
+                            <h1>{{ entry.title1 }}</h1>
+                            <div class="about-btn">
+                                <a href="{{ request.route_url('edit', id=entry.id) }}">Edit Post</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--banner-end-->
+        {% endfor %}
         </body>
-        <footer>
-        <p>© 2016 Sera Shioda Smith. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
-        </footer>
-    </body>
-</html>
-{% endblock %}
+
+    {% endblock %}
+
+    <!-- end Body Layout -->
+
+
+

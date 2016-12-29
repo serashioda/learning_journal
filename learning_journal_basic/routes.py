@@ -6,6 +6,6 @@ def includeme(config):
     config.add_static_view(name='static', path='static', cache_max_age=3600)
     config.add_route('list', '/')
     config.add_route('create', '/journal/new-entry')
-    config.add_route('detail', '/journal/{id}')
+    config.add_route('detail', '/journal/{id:\d+}')
     config.add_route('edit', '/journal/{id:\d+}/edit-entry')
     #config.add_route('category', '/journal/{cat:}\w+')
