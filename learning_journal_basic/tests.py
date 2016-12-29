@@ -55,7 +55,11 @@ def test_create_page_has_data(testapp):
 
 
 def test_edit_page_has_data(testapp):
-    """Test edit page exist/links properly"""
+    """Test edit page exist/links properly."""
     response = testapp.get("/journal/3/edit-entry")
     inner_html = response.html
     assert "Title:" in inner_html.find("article").text
+
+# def test_root(self):
+#         res = self.testapp.get('/', status=200)
+#         self.assertTrue(b'Pyramid' in res.body)
