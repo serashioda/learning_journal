@@ -7,32 +7,36 @@ THIS_DIR = os.path.dirname(__file__)
 
 ENTRIES = [
     {"id": 0,
-        "title": "Week 1",
-        "title1": "Day 1",
-        "create_date": "Dec 22, 2016",
-        "body": "Apples are rotten",
+        "title": "Week 3",
+        "title1": "Day 5",
+        "create_date": "Dec 23, 2016",
+        "body": "Pomogranets are rotten",
     },
     {"id": 1,
-        "title": "Week 1",
-        "title1": "Day 2",
-        "create_date": "Dec 23, 2016",
-        "body": "Oranges are rotten",
+        "title": "Week 3",
+        "title1": "Day 4",
+        "create_date": "Dec 22, 2016",
+        "body": "Mangos are rotten",
     },
     {"id": 2,
-        "title": "Week 1",
+        "title": "Week 3",
         "title1": "Day 3",
-        "create_date": "Dec 24, 2016",
+        "create_date": "Dec 21, 2016",
         "body": "Kiwis are rotten",
     },
+    {"id": 3,
+        "title": "Week 3",
+        "title1": "Day 2",
+        "create_date": "Dec 20, 2016",
+        "body": "Oranges are rotten",
+    },
+    {"id": 4,
+        "title": "Week 3",
+        "title1": "Day 1",
+        "create_date": "Dec 19, 2016",
+        "body": "Apples are rotten",
+    },
 ]
-
-
-# def get_entry(id):
-#     """Get the entry from the dictionary by id"""
-#     for entry in ENTRIES:
-#         if entry["id"] == id:
-#             return entry
-#     return None
 
 
 @view_config(route_name='list', renderer='templates/list.jinja2')
@@ -61,11 +65,3 @@ def edit_page(request):
     entry_id = int(request.matchdict["id"])
     entry = ENTRIES[entry_id]
     return {"entry": entry}
-
-
-# def includeme(config):
-#     """The configurator will attach my views to routes."""
-#     config.add_view(home_page, route_name='home')
-#     config.add_view(detail_page, route_name='detail')
-#     config.add_view(create_page, route_name='create')
-#     config.add_view(edit_page, route_name='update')
